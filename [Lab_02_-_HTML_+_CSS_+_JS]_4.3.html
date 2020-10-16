@@ -1,0 +1,67 @@
+﻿<html>
+<head>
+<title></title>
+<style>
+body {
+	font-family: verdana;
+}
+h1 {
+	color: #770000;
+	font-size: x-large;
+}
+thead {
+	background-color: #ffb945;
+	valign: center;
+}
+tbody {
+	background-color: #ffd38a;
+	border-color: black;
+}
+input {
+	color: black;
+}
+</style>
+</head>
+<body>
+<div id="wrapper">
+<div class="container">
+	<form id="tinh-dien-tich-hcn">
+	<table cellspacing="0" cellpadding="5" align="center">
+	<thead>
+	<tr>
+		<th colspan="2"><h1>DIỆN TÍCH và CHU VI HÌNH TRÒN</h1></th>
+	</tr>
+	</thead>
+	<tbody>
+	<tr>
+		<td>Bán kính</td>
+		<td><input type="number" id="ban-kinh" placeholder="Nhập bán kính"></td>
+	<tr>
+		<td>Diện tích</td>
+		<td><input type="number" id="dien-tich" placeholder="Diện tích hình tròn" disabled="disabled" style="background-color:#FFC0CB"></td>
+	</tr>
+	</tr>
+		<td>Chu vi</td>
+		<td><input type="number" id="chu-vi" placeholder="Chu vi hình tròn" disabled="disabled" style="background-color:#FFC0CB"></td>
+	<tr>
+	<tr>
+		<td colspan="2"><center><input type="button" onClick="TinhDienTich()" value="Tính"></center></td>
+	</tr>
+	</tbody>
+	</table>
+	</form?
+</div>
+</div>
+<script type="text/javascript">
+	function TinhDienTich() {
+		var bankinh = document.getElementById('ban-kinh');
+		var dientich = 3.14 * bankinh.value * bankinh.value;
+		var chuvi = 2*3.14 * bankinh.value;
+		//alert (dientich);
+		//return dientich;
+		document.getElementById('dien-tich').value = dientich;
+		document.getElementById('chu-vi').value = chuvi;
+	}
+</script>
+</body>
+</html>

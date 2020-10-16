@@ -1,0 +1,66 @@
+﻿<html>
+<head>
+<title></title>
+<style>
+body {
+	font-family: verdana;
+}
+h1 {
+	color: #770000;
+	font-size: x-large;
+}
+thead {
+	background-color: #ffb945;
+	valign: center;
+}
+tbody {
+	background-color: #ffd38a;
+	border-color: black;
+}
+input {
+	color: black;
+}
+</style>
+</head>
+<body>
+<div id="wrapper">
+<div class="container">
+	<form id="tinh-dien-tich-hcn">
+	<table cellspacing="0" cellpadding="5" align="center">
+	<thead>
+	<tr>
+		<th colspan="2"><h1>DIỆN TÍCH HÌNH CHỮ NHẬT</h1></th>
+	</tr>
+	</thead>
+	<tbody>
+	<tr>
+		<td>Chiều dài</td>
+		<td><input type="number" id="chieu-dai" placeholder="Nhập chiều dài"></td>
+	</tr>
+		<td>Chiều rộng</td>
+		<td><input type="number" id="chieu-rong" placeholder="Nhập chiều rộng"></td>
+	<tr>
+	<tr>
+		<td>Diện tích</td>
+		<td><input type="number" id="dien-tich" placeholder="Diện tích hình chữ nhật" disabled="disabled" style="background-color:#FF9999"></td>
+	</tr>
+	<tr>
+		<td colspan="2"><center><input type="button" onClick="TinhDienTich()" value="Tính"></center></td>
+	</tr>
+	</tbody>
+	</table>
+	</form?
+</div>
+</div>
+<script type="text/javascript">
+	function TinhDienTich() {
+		var dai = document.getElementById('chieu-dai');
+		var rong = document.getElementById('chieu-rong');
+		var dientich = dai.value * rong.value;
+		//alert (dientich);
+		//return dientich;
+		document.getElementById('dien-tich').value = dientich;
+	}
+</script>
+</body>
+</html>

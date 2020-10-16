@@ -1,0 +1,68 @@
+﻿
+<html>
+<head>
+<title></title>
+<style>
+body {
+	font-family: verdana;
+}
+h1 {
+	color: #770000;
+	font-size: x-large;
+}
+thead {
+	background-color: #ffb945;
+	valign: center;
+}
+tbody {
+	background-color: #ffd38a;
+	border-color: black;
+}
+input {
+	color: black;
+}
+</style>
+</head>
+<body>
+<div id="wrapper">
+<div class="container">
+	<form id="canh-huyen-tam-giac-vuong">
+	<table cellspacing="0" cellpadding="5" align="center">
+	<thead>
+	<tr>
+		<th colspan="2"><h1>CẠNH HUYỀN TAM GIÁC VUÔNG</h1></th>
+	</tr>
+	</thead>
+	<tbody>
+	<tr>
+		<td>Cạnh A:</td>
+		<td><input type="number" id="canh-a" placeholder="Nhập cạnh A"></td>
+	</tr>
+		<td>Cạnh B</td>
+		<td><input type="number" id="canh-b" placeholder="Nhập canh B"></td>
+	<tr>
+	<tr>
+		<td>Cạnh huyền</td>
+		<td><input type="number" id="canh-huyen" placeholder="Cạnh huyền tam giác vuông" disabled="disabled"></td>
+	</tr>
+	<tr>
+		<td colspan="2"><center><input type="button" onClick="TinhCanhHuyen()" value="Tính"></center></td>
+	</tr>
+	</tbody>
+	</table>
+	</form?
+</div>
+</div>
+<script type="text/javascript">
+	function TinhCanhHuyen() {
+		var a = document.getElementById('canh-a');
+		var b = document.getElementById('canh-b');
+		var huyen = Math.sqrt(a.value*a.value + b.value*b.value);
+		//var huyen = Number(a.value) + Number(b.value);
+		//alert (huyen);
+		//return huyen;
+		document.getElementById('canh-huyen').value = huyen;
+	}
+</script>
+</body>
+</html>
